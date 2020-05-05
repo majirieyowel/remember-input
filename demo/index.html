@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>How To Use RecallJs Library</h1>
+    <div>
+      <form action="" class="remember-input">
+        <input type="text" name="fname" placeholder="firstname" />
+        <br />
+
+        <input name="rad_options" type="checkbox" />
+        <br />
+        <input type="radio" name="rad" value="oshey" />
+        <input type="radio" name="rad" value="lashey" />
+        <br />
+        <select name="hollidays" id="">
+          <option value="holla">Holla</option>
+          <option value="bolla">bolla</option>
+          <option value="polla">polla</option>
+        </select>
+        <br />
+        <textarea name="message" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+
+  <script src="../dist/remember.min.js"></script>
+  <script>
+    Remember.init({
+        handleSubmit: true,
+        onSubmit: (e, data, submit) => {
+            console.log('submitting');
+            
+            setTimeout(() => {
+                submit();
+            }, 5000);
+            
+        },
+        clearOnSubmit: true,
+        exclude: ['fname']
+    });
+  </script>
+</html>
+
+<!-- {
+    selector: "remember-input",
+    storeTrigger: "change",
+    clearOnSubmit: false,
+    handleSubmit: true,
+    onSubmit: function () {
+      console.warn("Define a callback to handle for submission.");
+    },
+    disabledLocalStorage: false,
+    exclude: [],
+    disabled: false,
+  }; -->

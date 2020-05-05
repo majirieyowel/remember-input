@@ -1,0 +1,30 @@
+{
+  "name": "remember-input",
+  "version": "1.0.0",
+  "description": "A plugin to help remember form inputs",
+  "main": "dist/remember-input.cjs.js",
+  "module": "dist/remember-input.esm.js",
+  "browser": "dist/remember-input.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production rollup -c",
+    "watch": "NODE_ENV=dev rollup -c -w "
+  },
+  "keywords": [
+    "recall",
+    "input",
+    "form",
+    "remember",
+    "localstorage"
+  ],
+  "author": "Majiri Eyowel <majirieyowel@gmail.com> (http://majirieyowel.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@rollup/plugin-node-resolve": "7.1.3",
+    "rollup": "2.7.6",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-terser": "5.3.0"
+  }
+}

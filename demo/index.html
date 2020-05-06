@@ -3,46 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Remember Input</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <h1>How To Use RecallJs Library</h1>
-    <div>
-      <form action="" class="remember-input">
-        <input type="text" name="fname" placeholder="firstname" />
-        <br />
+    <div class="container recall-input">
+      <div class="col-md-12">
+        <div class="ro">
+          <h1 class="text-center mb-3">Rememner Input Simple Demo</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-8 mt-4 mb-4 mx-auto">
+            <form action="" class="remember-input">
+              <div class="form-group">
+                <label for="firstname">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="firstname"
+                  id="firstname"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="firstname"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
 
-        <input name="rad_options" type="checkbox" />
-        <br />
-        <input type="radio" name="rad" value="oshey" />
-        <input type="radio" name="rad" value="lashey" />
-        <br />
-        <select name="hollidays" id="">
-          <option value="holla">Holla</option>
-          <option value="bolla">bolla</option>
-          <option value="polla">polla</option>
-        </select>
-        <br />
-        <textarea name="message" id="" cols="30" rows="10"></textarea>
-        <button type="submit">Submit</button>
-      </form>
+              <div class="form-group">
+                <label for="relationship">Relationship</label>
+                <select
+                  name="relationship"
+                  class="form-control"
+                  id="relationship"
+                >
+                  <option> -- select --</option>
+                  <option value="single">Single</option>
+                  <option value="married">Married</option>
+                  <option value="divorced">Divorced</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"
+                  >Story of My life</label
+                >
+                <textarea
+                  name="story"
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <div class="form-check">
+                <input
+                  name="am_happy"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="defaultCheck1">
+                  I am happy?
+                </label>
+              </div>
+
+              <fieldset class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">How awesome are you?</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gridRadios"
+                        id="gridRadios1"
+                        value="super"
+                        checked
+                      />
+                      <label class="form-check-label" for="gridRadios1">
+                        Super
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gridRadios"
+                        id="gridRadios2"
+                        value="dupa"
+                      />
+                      <label class="form-check-label" for="gridRadios2">
+                        dupa
+                      </label>
+                    </div>
+                    <div class="form-check disabled">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gridRadios"
+                        id="gridRadios3"
+                        value="awesome"
+                        disabled
+                      />
+                      <label class="form-check-label" for="gridRadios3">
+                        awesome!
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <br />
+              <br />
+
+              <div class="d-flex justify-content-between">
+               
+              <button
+                type="submit"
+                onclick="window.location.reload()"
+                class="btn btn-warning"
+              >
+                Refresh Page
+              </button>   <button
+                type="submit"
+                onclick="alert('Check the console')"
+                class="btn btn-primary"
+              >
+                Submit
+              </button>
+              </div>
+
+            
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/remember-input@1.0.0/dist/remember-input.min.js"></script>
   <script>
     Remember.init({
-        handleSubmit: true,
-        onSubmit: (e, data, submit) => {
-            console.log('submitting');
-            
-            setTimeout(() => {
-                submit();
-            }, 5000);
-            
-        },
-        clearOnSubmit: true,
-        exclude: ['fname']
+      handleSubmit: true,
+      onSubmit: (e, data, submit) => {
+        console.log("submitting");
+
+        setTimeout(() => {
+          submit();
+        }, 5000);
+      },
+      clearOnSubmit: true,
+      exclude: ["fname"],
     });
   </script>
 </html>

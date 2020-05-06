@@ -1,6 +1,6 @@
 {
   "name": "remember-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin to help remember form inputs",
   "main": "dist/remember-input.cjs.js",
   "module": "dist/remember-input.esm.js",

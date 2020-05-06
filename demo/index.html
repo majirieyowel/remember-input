@@ -171,11 +171,12 @@
     Remember.init({
       handleSubmit: true,
       onSubmit: (e, data, submit) => {
-        console.log("submitting");
+        console.log(data);
+      
 
-        setTimeout(() => {
-          submit();
-        }, 5000);
+        // setTimeout(() => {
+        //   submit();
+        // }, 5000);
       },
       clearOnSubmit: true,
       exclude: ["password"],

@@ -36,8 +36,18 @@
                 <input
                   type="email"
                   class="form-control"
-                  name="firstname"
+                  name="email"
                   id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  id="pwd"
                   aria-describedby="emailHelp"
                 />
               </div>
@@ -168,20 +178,7 @@
         }, 5000);
       },
       clearOnSubmit: true,
-      exclude: ["fname"],
+      exclude: ["password"],
     });
   </script>
 </html>
-
-<!-- {
-    selector: "remember-input",
-    storeTrigger: "change",
-    clearOnSubmit: false,
-    handleSubmit: true,
-    onSubmit: function () {
-      console.warn("Define a callback to handle for submission.");
-    },
-    disabledLocalStorage: false,
-    exclude: [],
-    disabled: false,
-  }; -->
